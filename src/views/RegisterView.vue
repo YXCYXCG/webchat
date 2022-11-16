@@ -15,6 +15,7 @@
             </div>
             <div class="error-message">{{ error_message }}</div>
             <button type="submit" class="btn btn-primary">注册</button>
+            <a href="/login" class="link-secondary">已有账号? 去登录！</a>
           </form>
     </QQContainer>
 </template>
@@ -40,4 +41,7 @@ export default {
 </script>
 
 <style>
+.link-secondary {
+    float: right;
+}
 </style>
