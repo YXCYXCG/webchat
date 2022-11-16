@@ -1,10 +1,8 @@
 <template>
-    <div class="home">
-        <div class="container">
-            <div class="card">
-                <div class="card-body">
-                    <slot></slot>
-                </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <slot></slot>
             </div>
         </div>
     </div>
@@ -18,9 +16,7 @@ export default {
 
 <style scoped>
 .container {
-    width: 23%;
-    height: 50%;
     margin-top: 8%;
-    margin-left: 20%;
+    width: 50%;
 }
 </style>
