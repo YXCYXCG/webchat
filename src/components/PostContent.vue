@@ -1,11 +1,14 @@
 <template>
-    <div>PostContent</div>
+    <div class="postcontent">PostContent</div>
 </template>
 
 <script>
 </script>
 
-<style>
+<style scoped>
+.postcontent {
+    height: 56vh;
+}
 </style>
 
 

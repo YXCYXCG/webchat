@@ -1,6 +1,6 @@
 <template>
     <ContainerBase>
-        friend
+        <div class="friend">friend</div>
     </ContainerBase>
 </template>
 
@@ -14,7 +14,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.friend {
+    height: 56vh;
+}
 </style>
 
 

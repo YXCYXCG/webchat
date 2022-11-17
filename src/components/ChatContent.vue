@@ -1,11 +1,14 @@
 <template>
-    <div>ChatContent</div>
+    <div class="content">ChatContent</div>
 </template>
 
 <script>
 </script>
 
-<style>
+<style scoped>
+.content {
+    height: 40vh;
+}
 </style>
 
 

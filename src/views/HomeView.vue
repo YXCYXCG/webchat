@@ -1,6 +1,6 @@
 <template>
     <ContainerBase>
-      home
+      <div class="home">home</div>
     </ContainerBase>
 </template>
 
@@ -15,5 +15,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.home {
+  height: 56vh;
+}
 </style>
