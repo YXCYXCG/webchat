@@ -1,7 +1,5 @@
 <template>
-    <div>
-
-    </div>
+    <div>WriteBase</div>
 </template>
 
 <script>

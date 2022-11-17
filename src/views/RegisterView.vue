@@ -1,5 +1,5 @@
 <template>
-    <QQContainer>
+    <ContainerBase>
         <form>
             <div class="mb-3">
               <label for="username" class="form-label">用户名</label>
@@ -17,17 +17,17 @@
             <button type="submit" class="btn btn-primary">注册</button>
             <router-link :to="{name: 'login'}" class="nav-link">已有账号? 去登录！</router-link>
           </form>
-    </QQContainer>
+    </ContainerBase>
 </template>
 
 <script>
-import QQContainer from '@/components/QQContainer.vue';
+import ContainerBase from '@/components/ContainerBase.vue';
 import { ref } from 'vue'
 
 export default {
     name: 'RegisterView',
     components: {
-        QQContainer
+        ContainerBase
     },
 
     setup() {

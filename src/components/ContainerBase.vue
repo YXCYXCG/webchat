@@ -10,14 +10,14 @@
 
 <script>
 export default {
-    name: 'QQContainer'
+    name: 'ContainerBase'
 }
 </script>
 
 <style scoped>
 .container {
     margin-top: 8%;
-    width: 50%;
+    width: 55%;
 
 }
 </style>

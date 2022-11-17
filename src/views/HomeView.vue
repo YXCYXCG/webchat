@@ -1,18 +1,16 @@
 <template>
-    <QQContainer>
-      <UserInfo></UserInfo>
-    </QQContainer>
+    <ContainerBase>
+      home
+    </ContainerBase>
 </template>
 
 <script>
-import QQContainer from '@/components/QQContainer.vue'
-import UserInfo from '@/components/UserInfo.vue'
+import ContainerBase from '@/components/ContainerBase.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    QQContainer,
-    UserInfo
+    ContainerBase
   }
 }
 </script>
