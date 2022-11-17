@@ -5,7 +5,7 @@
                 <div class="col-3">
                     <img class="img-field" src="@/assets/images/photo.jpg" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-9">
                     <div class="note1">伤心太平洋</div>
                     <div class="note">我只爱你...</div>
                 </div>

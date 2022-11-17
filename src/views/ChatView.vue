@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-4">
                 <userInfo/>
+                <FriendList/>
             </div>
             <div class="col-8">
                 <ChatContent/>
@@ -16,14 +17,16 @@
 import ContainerBase from '../components/ContainerBase.vue'
 import ChatContent from '../components/ChatContent.vue'
 import WriteBase from '../components/WriteBase.vue'
-import userInfo from '../components/UserInfo.vue'
+import UserInfo from '../components/UserInfo.vue'
+import FriendList from '../components/FriendList.vue'
 
 export default {
     components: {
     ContainerBase,
     ChatContent,
     WriteBase,
-    userInfo
+    UserInfo,
+    FriendList
 }
 }
 </script>
