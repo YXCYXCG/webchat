@@ -18,5 +18,6 @@ export default {
 .container {
     margin-top: 8%;
     width: 50%;
+
 }
 </style>

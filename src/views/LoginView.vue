@@ -11,7 +11,7 @@
             </div>
             <div class="error-message">{{ error_message }}</div>
             <button type="submit" class="btn btn-primary">登录</button>
-            <a href="/register" class="link-secondary">没有账号? 点击注册！</a>
+            <router-link :to="{name: 'register'}" class="nav-link">没有账号? 点击注册！</router-link>
           </form>
     </QQContainer>
 </template>
@@ -36,8 +36,10 @@ export default {
 }
 </script>
 
-<style>
-.link-secondary {
+<style scoped>
+.nav-link {
     float: right;
+    color: gray;
+    margin-top: 6px;
 }
 </style>
