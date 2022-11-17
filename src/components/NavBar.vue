@@ -20,10 +20,6 @@
                 :to="{name: 'post'}">动态</router-link>
               </li>
             </ul>
-            <form class="d-flex " role="search">
-                <input class="form-control me-2" type="search" placeholder="用户名" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
                   <router-link :class="route_name == 'login' ? 'nav-link active' : 'nav-link'" 
