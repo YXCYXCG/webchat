@@ -2,14 +2,21 @@
     <div class="content">
         <div class="card">
             <div class="card-body">
-                <div class="nickname">老王</div>
-                下午去学校打球不？
+                <div class="nickname">{{ user.name }}</div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+export default {
+    props: {
+        user: {
+            type: Object,
+            requested: true
+        }
+    },
+}
 </script>
 
 <style scoped>
