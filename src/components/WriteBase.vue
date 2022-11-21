@@ -7,11 +7,13 @@
                         <img class="img-fluid image1" src="@/assets/images/express.png" alt="">
                     </div>
                     <div class="col-8">
-                        <button type="button" class="btn btn-success">发送</button>
+                        <button @click="send_msg" type="button" class="btn btn-success">
+                            发送
+                        </button>
                     </div>
                 </div>
                 <div class="input-group message_edit">
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea v-model="content" class="form-control" aria-label="With textarea"></textarea>
                 </div>
             </div>
         </div>
@@ -19,6 +21,20 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+export default {
+    setup(props, context) {
+        let content = ref('');
+        const send_msg = () => {
+            context.emit('send_msg', content.value);
+            content.value = "";
+        }
+        return {
+            send_msg,
+            content
+        }
+    }
+}
 </script>
 
 <style scoped>

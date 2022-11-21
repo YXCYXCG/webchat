@@ -7,7 +7,7 @@
             </div>
             <div class="col-8">
                 <ChatContent :user="user" :chat_record="chat_record"/>
-                <WriteBase/>
+                <WriteBase :user="user" @send_msg="send_msg"/>
             </div>
         </div>
     </ContainerBase>
@@ -29,6 +29,7 @@ export default {
                     id: 1,
                     name: "夕阳的刻痕",
                     pose: "夕阳，夕阳！",
+                    record_cnt: 7,
                     photo: "https://tse2-mm.cn.bing.net/th/id/OIP-C.ex7IED2b2rO_8YdslDUD_gAAAA?w=210&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7",
                     record: [
                         {
@@ -79,6 +80,7 @@ export default {
                     id: 2,
                     name: "小车轮",
                     pose: "咕噜咕噜",
+                    record_cnt: 2,
                     record: [
                         {
                             id: 1,
@@ -99,6 +101,7 @@ export default {
                     id: 3,
                     name: "四月",
                     pose: "你是人间四月天",
+                    record_cnt: 2,
                     record: [
                         {
                             id: 1,
@@ -120,6 +123,7 @@ export default {
                     name: "白天不懂夜的黑",
                     pose: "满地都是六便士，我却抬头看见了月亮。",
                     time: "09:15",
+                    record_cnt: 2,
                     record: [
                         {
                             id: 1,
@@ -140,6 +144,7 @@ export default {
                     id: 5,
                     name: "猪八戒",
                     pose: "好春光不如梦一场",
+                    record_cnt: 2,
                     record: [
                         {
                             id: 1,
@@ -160,6 +165,7 @@ export default {
                     id: 6,
                     name: "leetcode",
                     pose: "一起刷题吧！",
+                    record_cnt: 2,
                     record: [
                         {
                             id: 1,
@@ -180,6 +186,7 @@ export default {
                     id: 7,
                     name: "步步",
                     pose: "realZYfamily",
+                    record_cnt: 2,
                     record: [
                         {
                             id: 1,
@@ -206,6 +213,7 @@ export default {
             user.pose = user1.pose;
             user.photo = user1.photo;
             user.record = [];
+            user.record_cnt = user1.record_cnt;
             for (let i = 0; i < user1.record.length; i ++ ) {
                 user.record.push({
                     id: user1.record[i].id,
@@ -215,10 +223,21 @@ export default {
                 });
             }
         };
+        const send_msg = msg => {
+            user.record.push({
+                id: user.record_cnt + 1,
+                flag: false,
+                content: msg,
+                time: "12:49"
+            });
+            user.record_cnt ++ ;
+            console.log(msg);
+        }
         return {
             friend,
             user,
-            chat_with
+            chat_with,
+            send_msg
         }
     },
     components: {
